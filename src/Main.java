@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class Main {
@@ -30,6 +31,24 @@ public class Main {
         // print every grammar input into this program
         for (Grammar element : grammars) {
             System.out.println(element);
+        }
+
+        System.out.print(">| Enter your input string : ");
+        char[] inputs = reader.readLine().toCharArray();
+
+        Stack<Character> inputStack = new Stack<>();
+        for (int i = inputs.length-1 ; i >= 0 ; i--) {
+            inputStack.push(inputs[i]);
+        }
+
+        Stack<Character> parsingStack = new Stack<>();
+        while (!inputStack.empty()) {
+            parsingStack.push(inputStack.pop());
+
+            // do some magic here (check by pop each character and find if it can reduce.
+            // if not, continue pop next char (concat to string) and find it again.
+            // continue do this until it complete reduce or parsingStack is empty
+            // NOTE that you need to COPY parsingStack into new stack to use in this job.)
         }
     }
 }

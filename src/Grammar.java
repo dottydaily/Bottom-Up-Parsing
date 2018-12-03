@@ -8,13 +8,15 @@ public class Grammar {
     public Grammar(String leftInput, String rightInput) {
         this.leftOperand = leftInput;
         String[] inputs = rightInput.split("\\|");
-        System.out.println(Arrays.toString(inputs));
 
+        // add each operand in inputs into arrayList
         for (String operand : inputs) {
             rightOperands.add(operand);
         }
     }
 
+    // PROBLEM : not work on some case inputString
+    // NEED TO RE-IMPLEMENT IMMEDIATELY
     public String reduce(String parsingStack) {
         for (String operand : rightOperands) {
             if (operand.equals(parsingStack)) {
