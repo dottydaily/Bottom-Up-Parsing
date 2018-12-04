@@ -15,15 +15,26 @@ public class Grammar {
         }
     }
 
-    // PROBLEM : not work on some case inputString
-    // NEED TO RE-IMPLEMENT IMMEDIATELY
-    public String reduce(String parsingStack) {
-        for (String operand : rightOperands) {
-            if (operand.equals(parsingStack)) {
-                return leftOperand;
+    public String reduce(String parsingString) {
+        for (int len = parsingString.length() ; len > 0 ; len--) {
+            for (int startIndex = 0 ; startIndex <= parsingString.length()-len ; startIndex++) {
+                for (String operand : rightOperands) {
+                    if (operand.equals(parsingString.substring(startIndex, startIndex+len))) {
+                        return parsingString.replace(
+                                parsingString.substring(startIndex, startIndex+len),
+                                leftOperand);
+                    }
+                }
             }
         }
-        return parsingStack;
+
+        // extend the leftOperand if we have empty string
+        // (this case will trigger if all of right operands can't reduce parsingString)
+        if (hasEmptyString()) {
+            parsingString += leftOperand;
+        }
+
+        return parsingString;
     }
 
     public Boolean hasEmptyString() {
