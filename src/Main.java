@@ -29,9 +29,11 @@ public class Main {
         }
 
         // print every grammar input into this program
+        System.out.println("\n//////////Grammar list//////////");
         for (Grammar element : grammars) {
             System.out.println(element);
         }
+        System.out.println("////////////////////////////////\n");
 
         System.out.print(">| Enter your input string : ");
         char[] inputs = reader.readLine().toCharArray();
@@ -41,14 +43,37 @@ public class Main {
             inputStack.push(inputs[i]);
         }
 
-        Stack<Character> parsingStack = new Stack<>();
-        while (!inputStack.empty()) {
-            parsingStack.push(inputStack.pop());
+        // reduce parsingString by checking with grammars
+        String parsingString = "";
+        while (!grammars.empty()) {
+            Grammar currentGrammar = grammars.pop();
+            // reset parsingString to empty string for using in the loop
+            parsingString = "";
 
-            // do some magic here (check by pop each character and find if it can reduce.
-            // if not, continue pop next char (concat to string) and find it again.
-            // continue do this until it complete reduce or parsingStack is empty
-            // NOTE that you need to COPY parsingStack into new stack to use in this job.)
+            while (!inputStack.empty()) {
+                parsingString += inputStack.pop();
+
+                parsingString = currentGrammar.reduce(parsingString);
+            }
+
+            // if we have replace empty string with leftOperand
+            // we need to redo the reduce action (because it skip a number of reduce time)
+            // there are some case that inputStack will be empty before complete reduce
+            parsingString = currentGrammar.reduce(parsingString);
+
+//            System.out.println("Current grammar is : " + currentGrammar);
+//            System.out.println("Current parsing stack is : $ " + parsingString);
+
+            // put result of parsing stack into inputStack for checking with next grammar
+            char[] nextInput = parsingString.toCharArray();
+            for (int i = nextInput.length-1 ; i >= 0 ; i--) {
+                inputStack.push(nextInput[i]);
+            }
         }
+
+        System.out.println("\n////////////////////////////////");
+        System.out.println("Result : " + parsingString);
+        System.out.println("////////////////////////////////");
+
     }
 }
