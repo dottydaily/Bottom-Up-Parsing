@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Grammar {
     private String leftOperand;
@@ -15,11 +16,14 @@ public class Grammar {
         }
     }
 
-    public String reduce(String parsingString) {
+    public String reduce(String parsingString, Stack<Character> inputStack) {
         for (int len = parsingString.length() ; len > 0 ; len--) {
             for (int startIndex = 0 ; startIndex <= parsingString.length()-len ; startIndex++) {
                 for (String operand : rightOperands) {
                     if (operand.equals(parsingString.substring(startIndex, startIndex+len))) {
+                        // print action if success reduce
+                        System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString,
+                                Main.printInputStack(inputStack), "Reduce "+leftOperand+" -> "+operand);
                         return parsingString.replace(
                                 parsingString.substring(startIndex, startIndex+len),
                                 leftOperand);
@@ -27,10 +31,15 @@ public class Grammar {
                 }
             }
         }
+        // if not found, action = "shift"
+//        System.out.printf("| %-15s | %15s | %-15s |\n", parsingString,
+//                Main.printInputStack(inputStack), "Shift");
 
         // extend the leftOperand if we have empty string
         // (this case will trigger if all of right operands can't reduce parsingString)
         if (hasEmptyString()) {
+            System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString,
+                    Main.printInputStack(inputStack), "Reduce "+leftOperand+" -> "+"ε");
             parsingString += leftOperand;
         }
 
