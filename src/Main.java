@@ -55,7 +55,7 @@ public class Main {
         }
 
         // reduce parsingString by checking with grammars
-        System.out.println("\n|   Parsing stack   |       Input       |        Action        |");
+        System.out.println("\n|   Parsing stack   |    Input stack    |        Action        |");
         String parsingString = "";
         boolean isGrammarChanged = false;
         while (!grammars.empty()) {

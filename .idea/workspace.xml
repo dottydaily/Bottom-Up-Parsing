@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fd684dd9-6aec-4d49-b2cd-14cf0952080a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grammar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grammar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+            <state relative-caret-position="286">
+              <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +105,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544111812637" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544112032089" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -152,7 +150,7 @@
       <workItem from="1543944724276" duration="1178000" />
       <workItem from="1543949102375" duration="4592000" />
       <workItem from="1544017029830" duration="754000" />
-      <workItem from="1544108338769" duration="3272000" />
+      <workItem from="1544108338769" duration="3513000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10; - Create class Grammar&#10; - Main class now can only input each grammar into program">
       <created>1543865700054</created>
@@ -182,14 +180,22 @@
       <option name="project" value="LOCAL" />
       <updated>1543953577546</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement : Grammar reducing step">
+      <created>1544111858117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544111858117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20656000" />
+    <option name="totallyTimeSpent" value="20897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.012035011" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -201,7 +207,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40262583" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42122537" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -230,7 +236,8 @@
     <MESSAGE value="Initial commit&#10; - Create class Grammar&#10; - Main class now can only input each grammar into program" />
     <MESSAGE value="Add code : pop inputStack into parsingStack and reduce (Undone)" />
     <MESSAGE value="Implement : grammar checking (Done)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement : grammar checking (Done)" />
+    <MESSAGE value="Implement : Grammar reducing step" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement : Grammar reducing step" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -267,8 +274,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        <state relative-caret-position="286">
+          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
