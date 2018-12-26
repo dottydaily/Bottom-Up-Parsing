@@ -17,8 +17,15 @@ public class Grammar {
     }
 
     public String reduce(String parsingString, Stack<Character> inputStack) {
+
+        // start with max len of parsingString
         for (int len = parsingString.length() ; len > 0 ; len--) {
+
+            // checking with "len" length
+            // move startIndex by 1 until this checking word reach the end of parsingString
             for (int startIndex = 0 ; startIndex <= parsingString.length()-len ; startIndex++) {
+
+                // check with each operand in operand list
                 for (String operand : rightOperands) {
                     if (operand.equals(parsingString.substring(startIndex, startIndex+len))) {
                         // print action if success reduce
@@ -31,11 +38,8 @@ public class Grammar {
                 }
             }
         }
-        // if not found, action = "shift"
-//        System.out.printf("| %-15s | %15s | %-15s |\n", parsingString,
-//                Main.printInputStack(inputStack), "Shift");
 
-        // extend the leftOperand if we have empty string
+        // extend the leftOperand if we have empty string in rightOperands
         // (this case will trigger if all of right operands can't reduce parsingString)
         if (hasEmptyString()) {
             System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString,

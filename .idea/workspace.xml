@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fd684dd9-6aec-4d49-b2cd-14cf0952080a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grammar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grammar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grammar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+            <state relative-caret-position="102">
+              <caret line="18" column="74" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+            <state relative-caret-position="210">
+              <caret line="105" column="115" selection-start-line="105" selection-start-column="115" selection-end-line="105" selection-end-column="115" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,10 +63,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -72,34 +75,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Bottom-Up Parsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bottom-Up Parsing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bottom-Up Parsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bottom-Up Parsing" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bottom-Up Parsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bottom-Up Parsing" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bottom-Up Parsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bottom-Up Parsing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bottom-Up-Parsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bottom-Up-Parsing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,6 +139,7 @@
       <workItem from="1543949102375" duration="4592000" />
       <workItem from="1544017029830" duration="754000" />
       <workItem from="1544108338769" duration="3513000" />
+      <workItem from="1545830280243" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10; - Create class Grammar&#10; - Main class now can only input each grammar into program">
       <created>1543865700054</created>
@@ -191,13 +180,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20897000" />
+    <option name="totallyTimeSpent" value="22770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.012035011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -207,7 +196,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42122537" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46644846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -244,7 +233,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>60</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -264,8 +253,8 @@
     <entry file="file://$PROJECT_DIR$/src/GrammarChecker.java" />
     <entry file="file://$PROJECT_DIR$/src/Grammar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+        <state relative-caret-position="102">
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -274,8 +263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+        <state relative-caret-position="210">
+          <caret line="105" column="115" selection-start-line="105" selection-start-column="115" selection-end-line="105" selection-end-column="115" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -30,6 +30,9 @@ public class Main {
         System.out.println("   >| and right operand = (A)A|H");
         System.out.println("   >| NOTE : If you want to input a \"Empty String\", please enter this character : ε\n");
 
+        String targetResultString = "";
+
+        // loop for input each grammar
         for (int i = 0 ; i < grammarNumber ; i++) {
             System.out.println(">| Grammar " + (i+1));
             System.out.print("   >| Left operand : ");
@@ -37,6 +40,11 @@ public class Main {
             System.out.print("   >| Right operand : ");
             String right = reader.readLine();
             grammars.push(new Grammar(left, right));
+
+            // save the first left operand (this is our target of reducing inputString)
+            if (i == 0) {
+                targetResultString = left;
+            }
         }
 
         // print every grammar input into this program
@@ -46,27 +54,27 @@ public class Main {
         }
         System.out.println("////////////////////////////////\n");
 
+        // input each input string into stack
         System.out.print(">| Enter your input string : ");
         char[] inputs = reader.readLine().toCharArray();
 
         Stack<Character> inputStack = new Stack<>();
         for (int i = inputs.length-1 ; i >= 0 ; i--) {
-            inputStack.push(inputs[i]);
+            inputStack.push(inputs[i]);     // make each input string be a input stack
         }
 
         // reduce parsingString by checking with grammars
         System.out.println("\n|   Parsing stack   |    Input stack    |        Action        |");
         String parsingString = "";
         boolean isGrammarChanged = false;
-        while (!grammars.empty()) {
+        while (!grammars.empty()) {     // check until your grammar stack is empty
             Grammar currentGrammar = grammars.pop();
-            // reset parsingString to empty string for using in the loop
-            parsingString = "";
+
+            parsingString = ""; // reset parsingString to empty string for using in the loop
 
             while (!inputStack.empty()) {
                 // if change to new grammar, skip print the line that move result from previous grammar into new parsing
                 if (!isGrammarChanged) {
-                    isGrammarChanged = false;
                     System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString, printInputStack(inputStack), "Shift");
                 }
                 parsingString += inputStack.pop();
@@ -91,7 +99,11 @@ public class Main {
             isGrammarChanged = true;
         }
 
-        System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString, printInputStack(inputStack), "Accept");
-
+        if (parsingString.equals(targetResultString)) {
+            System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString, printInputStack(inputStack), "Accept");
+        }
+        else {
+            System.out.printf("| $ %-15s | %15s $ | %-20s |\n", parsingString, printInputStack(inputStack), "Reject");
+        }
     }
 }
